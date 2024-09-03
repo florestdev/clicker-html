@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кликер - FlorestDev</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+    #clicker {
+        padding: 20px;
+        font-size: 24px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    #exit {
+      padding: 20px;
+      font-size: 24px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<h1>Привет, <span id="name">ковбой.</span></h1>
+<p>В данном кликере ты можешь достигнуть вершин. Много званий, которые тебе предстоит получить. Без определителя авто-кликера, без всех этих "заработков в час", чистый кликер. Выживает сильнейший. Удачи тебе, воин. FlorestDev</p>
+<button id="clicker">Нажми меня!</button>
+<p>Количество кликов: <span id="clickCount">0</span></p>
+<p>Твое звание: <span id="yourUpgrade">Начинающий</span></p>
+<button id="exit">Выйти из игры</button>
+
+<script>
+    let clickCount = 0;
+    const clickerButton = document.getElementById('clicker');
+    const clickCountDisplay = document.getElementById('clickCount');
+    const YourUpgrade = document.getElementById('yourUpgrade');
+    const ExitButton = document.getElementById('exit');
+    clickerButton.addEventListener('click', function() {
+        if (clickCount === 10) {
+          alert('С твоей первой десяточкой)))');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = "Начинающий с 10-ю жевачками по рублю";
+
+        }
+        else if (clickCount === 100) {
+          alert('Фига ты жойски, уже соточка');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = "Чел с двумя дошиками по акции и гнилыми яблочками.";
+        }
+        else if (clickCount === 1000) {
+          alert('С твоей первой тысячью, дарю тебе козу.');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = "Чувак с косяриком, который можно просрать в картах.";
+        }
+        else if (clickCount === 10000) {
+          alert('Уже десять тыщ? Максимум на 3 носка по акции от Ахмеда хватит..');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = "Чувак с 10к рублей. Хватит на аренду хрущобы в Мумбаи.";
+        }
+        else if (clickCount === 100000) {
+          alert('Ммм, первый капитал. Хватит на маленькую темку.');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = 'Начинающий темщик, продающий гнилые носочки.';
+        }
+        else if (clickCount === 1000000) {
+          alert('Ооо, дарагой, у тебя уже будет Лада Приора!');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = 'Миллионер в 0 лет)';
+        }
+        else if (clickCount === 10000000) {
+          alert('ФИГА СЕ, этого хватит на однушку в хрущевке в жопе Москвы.');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = 'Обладатель хрущевки за 10 млн.';
+        }
+        else if (clickCount === 100000000) {
+          alert('Богатый))');
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = 'Чувак-гений с 100 млн. рублями.';
+        }
+        else if (clickCount === 1000000000) {
+          alert('Ну все, братан, ты жоски))')
+          clickCount++;
+          clickCountDisplay.textContent = clickCount;
+          YourUpgrade.textContent = 'Илон Макс в 1 год. Высший уровень.';
+        }
+
+        clickCount++;
+        clickCountDisplay.textContent = clickCount;
+    });
+  ExitButton.addEventListener('click', function() {
+    alert(`Пока. Будем ждать тебя еще!\nТвои результаты:\nОчки: ${clickCount}.\nТвое звание: ${YourUpgrade.textContent}`);
+    window.close();
+  })  
+</script>
+</body>
+</html>
+
