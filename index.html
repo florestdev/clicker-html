@@ -27,7 +27,8 @@
       cursor: pointer;
       border-radius: 5px;
       margin-top: 20px;
-    #get-to-site {
+    }
+    #getToSite {
       padding: 20px;
       font-size: 24px;
       background-color: blue;
@@ -37,7 +38,6 @@
       border-radius: 5px;
       margin-top: 20px;
     }
-  }
 </style>
 </head>
 <body>
@@ -47,7 +47,7 @@
 <p>Количество кликов: <span id="clickCount">0</span></p>
 <p>Твое звание: <span id="yourUpgrade">Начинающий</span></p>
 <button id="exit">Выйти из игры</button>
-<button id='get-to-site'>Мои социальные сети</button>
+<button id="getToSite">Мои социальные сети</button>
 
 <script>
     let clickCount = 0;
@@ -55,7 +55,7 @@
     const clickCountDisplay = document.getElementById('clickCount');
     const YourUpgrade = document.getElementById('yourUpgrade');
     const ExitButton = document.getElementById('exit');
-    const GetToSite = document.getElementById('get-to-site');
+    const GetToSite = document.getElementById('getToSite');
     clickerButton.addEventListener('click', function() {
         if (clickCount === 10) {
           alert('С твоей первой десяточкой)))');
@@ -127,4 +127,3 @@
 </script>
 </body>
 </html>
-
