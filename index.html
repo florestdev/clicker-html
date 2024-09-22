@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Кликер - FlorestDev</title>
-<script src="https://tg.dev/javascript/telegram-logger.js"></script>
 <style>
     body {
         font-family: Arial, sans-serif;
@@ -51,8 +50,6 @@
 <button id="getToSite">Мои социальные сети</button>
 
 <script>
-    alert(`Твой юзер агент: ${window.navigator.userAgent}`);
-    const TelegramWindow = new TelegramApi();
     let clickCount = 0;
     const clickerButton = document.getElementById('clicker');
     const clickCountDisplay = document.getElementById('clickCount');
@@ -60,9 +57,6 @@
     const ExitButton = document.getElementById('exit');
     const GetToSite = document.getElementById('getToSite');
     const Name_in_Clicker = document.getElementById('name');
-    const GetInfo = TelegramWindow.getUserInfo();
-    
-    Name_in_Clicker.textContent = GetInfo.first_name;
     clickerButton.addEventListener('click', function() {
         if (clickCount === 10) {
           alert('С твоей первой десяточкой)))');
